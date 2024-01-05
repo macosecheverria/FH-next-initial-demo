@@ -1,20 +1,20 @@
 import Link from "next/link";
-import { NextPageWithLayout } from "./_app";
+import { NextPageWithLayout } from "../_app";
 import { MainLayout } from "@/components/layouts/MainLayout";
 import DarkLayout from "@/components/layouts/DarkLayout";
 
-const HomePage: NextPageWithLayout = () => {
+const PricingPage: NextPageWithLayout = () => {
   return (
     <>
-      <h1 className={"title"}>Home Page</h1>
+      <h1 className="title">Pricing Page</h1>
       <h1>
-        Ir a <Link href="/about">About</Link>
+        ir a <Link href={"/"}>Home</Link>
       </h1>
     </>
   );
 };
 
-HomePage.getLayout = function (page: JSX.Element) {
+PricingPage.getLayout = function getLayout(page: JSX.Element) {
   return (
     <MainLayout>
       <DarkLayout>{page}</DarkLayout>
@@ -22,4 +22,4 @@ HomePage.getLayout = function (page: JSX.Element) {
   );
 };
 
-export default HomePage;
+export default PricingPage;
